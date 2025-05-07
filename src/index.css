@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --darkGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+}
+
+.app {
+  height: 100vh;
+}
+
+.app.overflow {
+  overflow: hidden;
+}
+
+.first img {
+  width: 100%;
+}
+
+.second {
+  padding: 2rem 1rem;
+}
+
+.second h1 {
+  color: var(--darkGrey);
+  margin-bottom: 1.5rem;
+}
+
+.second p {
+  color: var(--darkGrey);
+  margin-bottom: 1.2rem;
+  font-size: .9rem;
+  line-height: 1.2rem;
+}
+
+.per_line {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+}
+
+.per_line .circle img {
+  width: .9rem;
+}
+
+form .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .4rem;
+}
+
+.label span {
+  font-size: .65rem;
+  color: red;
+  display: none;
+}
+
+.label span.error {
+  display: inline-block;
+}
+
+form .input_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.input_div p {
+  color: red;
+  position: absolute;
+  left: 1rem;
+  display: none;
+}
+
+.input_div p.error {
+  display: inline-block;
+}
+
+
+form label {
+  display: inline-block;
+  font-size: .6rem;
+  color: var(--darkGrey);
+  font-weight: 700;
+}
+
+form input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: .3rem;
+  border: 1px solid var(--grey);
+  outline: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form input.error {
+  background-color: pink;
+}
+
+form button {
+  background-color: var(--darkGrey);
+  color: white;
+  height: 2.8rem;
+  width: 100%;
+  border-radius: .3rem;
+  border: none;
+  font-weight: 600;
+}
+
+.success {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.success img {
+  width: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.success h1 {
+  color: var(--darkGrey);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.success p {
+  color: var(--darkGrey);
+  font-size: .8rem;
+  line-height: 1.3rem;
+}
+
+.success button {
+  height: 2.5rem;
+  background-color: var(--darkGrey);
+  color: white;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: .4rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.success button:hover {
+  background-color: rgb(255, 98, 87);
+  box-shadow: -1px 4px 12px 1px rgba(252, 156, 149, 0.781);
+}
+
+@media (min-width: 400px) {
+  body {
+    background-color: var(--darkGrey)
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 22rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+    overflow: hidden;
+  }
+
+  .second {
+    flex-shrink: 0;
+    /* background-color: aqua; */
+  }
+}
+
+
+@media (min-width:500px) {
+  .app {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 45rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first img {
+    opacity: 0;
+  }
+
+  .first {
+    flex-shrink: 0;
+    background-image: url(../public/Images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30em;
+    width: 20rem;
+    order: 2;
+  }
+
+  .first img {
+    height: 100%
+  }
+
+  .second {
+    flex-shrink: 0;
+    width: 20rem;
+    height: 30rem;
+    order: 1;
+  }
+
+  .success {
+    background-color: var(--darkGrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .message {
+    background-color: white;
+    height: 18rem;
+    width: 18rem;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .success img {
+    width: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .success h1 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-bottom: .8rem;
+  }
+
+  .success p {
+    font-size: .6rem;
+    line-height: .8rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .success button {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+}
